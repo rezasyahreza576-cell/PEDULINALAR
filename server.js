@@ -140,3 +140,8 @@ app.get("/api/health", (req, res) => {
 app.listen(PORT, () => {
   console.log(`✅ PeduliNalar berjalan di http://localhost:${PORT}`);
 });
+const express = require('express');
+const path = require('path');
+const app = express();
+
+app.use(express.static(path.join(__dirname, 'PUBLIC')));
