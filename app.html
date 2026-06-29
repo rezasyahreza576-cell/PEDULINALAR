@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PeduliNalar — Berkas Pemeriksaan</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="watermark"></div>
+
+<header class="topbar">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2L4 5v6c0 5 3.4 8.6 8 11 4.6-2.4 8-6 8-11V5l-8-3z" stroke="#B23A2E" stroke-width="1.6"/>
+        <path d="M8.5 12.2l2.4 2.4 4.6-5.2" stroke="#1F6F5C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand-name">PeduliNalar</span>
+    </a>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="app.html" class="active">Mulai Scan</a>
+    </nav>
+  </div>
+</header>
+
+<div class="case-layout">
+
+  <aside class="case-sidebar reveal">
+    <p class="sidebar-title">Berkas Kasus</p>
+    <span class="server-badge" id="serverStatusScan">Memeriksa server...</span>
+
+    <div class="field">
+      <label class="field-label">Jenis Konten</label>
+      <div class="mode-toggle">
+        <button type="button" data-mode="teks" class="active">Teks</button>
+        <button type="button" data-mode="link">Link Video</button>
+      </div>
+    </div>
+
+    <p class="helper">Pilih jenis konten, isi bidang di sebelah kanan, lalu klik <strong>Mulai Scan</strong>. API key Gemini dikelola oleh server, tidak perlu Anda masukkan di sini.</p>
+  </aside>
+
+  <main class="case-main reveal">
+    <div class="report-head">
+      <h1>Scan Nalar</h1>
+      <span class="case-id">SENIOR EPISTEMIC ANALYST · GEMINI</span>
+    </div>
+    <p class="report-sub">Bedah konten untuk mendeteksi disinformasi, manipulasi AI/deepfake, dan jebakan ekonomi atensi.</p>
+
+    <div id="inputTeks" class="field">
+      <label class="field-label" for="textArea">Tempel teks berita / narasi</label>
+      <textarea id="textArea" rows="7" placeholder="Tempel teks di sini..."></textarea>
+    </div>
+
+    <div id="inputLink" class="field" style="display:none;">
+      <label class="field-label" for="linkArea">Tempel link video (YouTube/media)</label>
+      <input type="text" id="linkArea" placeholder="https://...">
+    </div>
+
+    <button class="scan-btn" id="scanBtn">Mulai Scan Nalar 🚀</button>
+
+    <div class="loading-line" id="loadingLine" style="display:none;">
+      <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      Gemini sedang membedah anatomi informasi...
+    </div>
+
+    <div class="error-box" id="scanError"></div>
+
+    <div class="scan-result" id="scanResult">
+      <div class="scan-result-head">
+        <span>Laporan Analisis</span>
+        <span id="scanResultMeta"></span>
+      </div>
+      <div class="scan-result-body" id="scanResultBody"></div>
+    </div>
+  </main>
+
+</div>
+
+<div class="marquee-bar">
+  <div class="marquee-track">
+    <span>AHMAD SYAHREZA</span><span>AHMAD SYAHREZA</span><span>AHMAD SYAHREZA</span><span>AHMAD SYAHREZA</span><span>AHMAD SYAHREZA</span><span>AHMAD SYAHREZA</span>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

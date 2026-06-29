@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PeduliNalar — Sistem Imun Kognitif Nasional</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="watermark"></div>
+
+<header class="topbar">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2L4 5v6c0 5 3.4 8.6 8 11 4.6-2.4 8-6 8-11V5l-8-3z" stroke="#B23A2E" stroke-width="1.6"/>
+        <path d="M8.5 12.2l2.4 2.4 4.6-5.2" stroke="#1F6F5C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand-name">PeduliNalar</span>
+    </a>
+    <nav>
+      <a href="index.html" class="active">Beranda</a>
+      <a href="app.html">Mulai Scan</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <svg class="parallax-layer parallax-back" data-speed="0.12" width="420" height="420" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg">
+    <rect x="40" y="30" width="220" height="290" rx="6" transform="rotate(8 150 175)" fill="none" stroke="#C9CDC0" stroke-width="2"/>
+    <rect x="70" y="50" width="220" height="290" rx="6" transform="rotate(-4 180 195)" fill="none" stroke="#C9CDC0" stroke-width="2"/>
+    <circle cx="330" cy="90" r="70" fill="none" stroke="#1F6F5C" stroke-width="1.4" opacity="0.5"/>
+  </svg>
+  <svg class="parallax-layer parallax-front" data-speed="0.28" width="220" height="220" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="85" cy="85" r="52" fill="none" stroke="#B23A2E" stroke-width="4"/>
+    <circle cx="85" cy="85" r="36" fill="none" stroke="#B23A2E" stroke-width="1.4" opacity="0.6"/>
+    <line x1="124" y1="124" x2="172" y2="172" stroke="#B23A2E" stroke-width="6" stroke-linecap="round"/>
+    <path d="M65 85 l14 14 28-30" fill="none" stroke="#1F6F5C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Berkas 001 / Pengantar</p>
+      <h1>Filter Fakta. Deteksi Hoaks.<br><span class="accent">Lawan Manipulasi AI.</span></h1>
+      <p class="lede reveal">PeduliNalar membedah teks dan link video dengan bantuan Gemini AI, mencari jejak disinformasi, deepfake, dan jebakan ekonomi atensi sebelum Anda ikut menyebarkannya.</p>
+      <div class="cta-row reveal">
+        <a href="app.html" class="btn btn-primary">Mulai Pemeriksaan →</a>
+        <a href="#faq" class="btn btn-ghost">Tanya AI</a>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="stamp">
+        <span class="stamp-text">Diperiksa<br>Nalar Digital<small>PEDULINALAR · AI</small></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="fitur">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Apa yang kami periksa</p>
+      <h2>Fitur Utama</h2>
+    </div>
+    <div class="card-grid reveal-stagger">
+      <div class="card">
+        <span class="tab">Teks</span>
+        <h3>Deteksi Narasi Hoaks</h3>
+        <p>Tempelkan teks berita atau pesan berantai. AI membedah klaim, framing, dan pola manipulasi yang tersembunyi di dalamnya.</p>
+      </div>
+      <div class="card">
+        <span class="tab">Video</span>
+        <h3>Forensik Link Video</h3>
+        <p>Tempelkan link YouTube atau media lain. Sistem menelusuri indikasi deepfake dan konten yang menyesatkan.</p>
+      </div>
+      <div class="card">
+        <span class="tab">Laporan</span>
+        <h3>Verdict Bergaya Berkas</h3>
+        <p>Setiap pemeriksaan ditutup dengan cap status: Aman, Perlu Konfirmasi, atau Berpotensi Hoaks — jelas dan tidak ambigu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Belum yakin cara pakainya?</p>
+      <h2>Tanya AI Langsung</h2>
+    </div>
+    <div class="faq-box reveal">
+      <span class="server-badge" id="serverStatusFaq">Memeriksa server...</span>
+      <div class="field">
+        <label class="field-label" for="faqQuestion">Pertanyaan Anda</label>
+        <input type="text" id="faqQuestion" placeholder="Contoh: Bagaimana cara memeriksa link video?">
+      </div>
+      <button class="btn btn-primary" id="faqAskBtn">Tanya Sekarang</button>
+      <div class="answer-box" id="faqAnswer"></div>
+      <div class="error-box" id="faqError"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>PeduliNalar — Prototipe MVP</span>
+    <span>Ditenagai oleh Gemini AI · API key tersimpan aman di server</span>
+  </div>
+</footer>
+
+<div class="marquee-bar">
+  <div class="marquee-track">
+    <span>AHMAD SYAHREZA</span><span>AHMAD SYAHREZA</span><span>AHMAD SYAHREZA</span><span>AHMAD SYAHREZA</span><span>AHMAD SYAHREZA</span><span>AHMAD SYAHREZA</span>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
